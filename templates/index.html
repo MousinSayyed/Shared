@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-uacompatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+</head>
+<body>
+    <h1>Hi Welcome to Sign Up page</h1>
+    <p>Today is: {{ day }}</p>
+    <p>Current date and time: {{ date }}, {{ time }}</p>
+    <h2>Please enter your credentials!</h2>
+
+    <form action="/submit" method="post">
+      
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter you name">
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <input type="submit" value="Sign Up">
+
+    </form>
+</body>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    body 
+        {
+      margin: 0;
+      font-family: cursive, sans-serif;
+      background: linear-gradient(to left, #fff7ad, #ffd86f);
+      min-height: 100vh;
+      align-items: center;
+      justify-content: left;
+
+    }
+    form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 300px;
+      margin-left: 600px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #444;
+    }
+
+     h1 {
+      margin: 5px 3px 10px;
+      text-align: center;
+      color: #333;
+      font-size: 32px;
+      margin-bottom: auto;
+      
+    
+    }
+     p {
+      margin: 5px 3px 10px;
+      text-align: center;
+      color: #333;
+      font-size: 32px;
+      margin-bottom: auto;
+     }
+        h2 {
+        margin: 70px 20px 20px;
+        color: #666;
+        font-size: 18px;
+        margin-bottom: bottom;
+        margin-left: 600px;
+       
+        }
+
+
+    button:hover {
+      background: #0f2d81;
+    }
+</style>
+    
+</html>
