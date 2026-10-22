@@ -9,7 +9,7 @@ load_dotenv()
 MONGO_URI = os.getenv("MONGO_URI")
 client = MongoClient(MONGO_URI)
 db = client.mydatabase
-
+print("Connected to MongoDB")
 collection = db['mycollection']
 app = Flask(__name__)
 
@@ -26,7 +26,7 @@ def home():
 @app.route('/submit', methods=['GET','POST'])
 def submit():
     form_data = dict(request.form)
-    collection.insert_one(form_data)
+    collection.insert_one(form_data.copy())
     return form_data
 
 
